@@ -24,11 +24,9 @@ def extract_answer(answer):
 def test(path, type_dataset, log):
     if type_dataset == "folio":
         standard_answer = np.load(".\datasets\FOLIO\\npy\\val.npy")
-        # standard_answer = np.load(".\datasets2\FOLIO\\npy\\val.npy")
-        # # print(type(option))
+
     elif type_dataset == "pw":
         standard_answer = np.load(".\datasets\pw\\npy\\val.npy")
-        # standard_answer = np.load(".\datasets2\pw\\npy\dev.npy")
     else:
         standard_answer = np.load(".\datasets\\ruletaker\\npy\\val.npy")
     with open(path, 'r', encoding='utf-8') as file:
@@ -54,11 +52,6 @@ def test(path, type_dataset, log):
         if answer[count] == standard_answer[count]:
             right += 1
             logging.info(f"right: {right}, count: {count}")
-        # print(count)
-        # print(content)
-        # print(answer_res)
-        # print(response)
-        # print(answer)
         logging.info(f"count: {count}")
         logging.info(f"content: {content}")
         logging.info(f"answer_res: {answer_res}")
@@ -73,11 +66,8 @@ def test(path, type_dataset, log):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="dataset")
     
-    parser.add_argument('--dataset', type=str, required=True, help="数据集的路径")
-    parser.add_argument('--type', type=str, required=True, help="数据集名称")
-    # parser.add_argument('--start', type=int, required=True, help="开始位置")
-    # parser.add_argument('--result', type=str, required=True, help="存储位置")
-    # parser.add_argument('--result2', type=str, required=True, help="另一个存储位置")
+    parser.add_argument('--dataset', type=str, required=True, help="dataset path")
+    parser.add_argument('--type', type=str, required=True, help="dataset name")
     parser.add_argument('--log', type=str, required=True, help="log")
 
     args = parser.parse_args()
