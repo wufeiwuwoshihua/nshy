@@ -26,11 +26,11 @@ LLM_response_multi return a openai choices list
 
 3. run LLM4logicqa for ReClor and Logicqa
 
-4. run LLM4logicqa for FOLIO, proofwriter and ReleTaker
+4. run LLM4logicqa for FOLIO, proofwriter and RuleTaker
 
 5. arguments are 
 --dataset your dataset path
---type dataset name
+--type dataset name in "newqa"(logicqa_english) "logicqa"(logicqa chinese) "reclor" "folio" "pw" "ruletaker"
 --log logfile
 results are the last line in logfiles
 ```
