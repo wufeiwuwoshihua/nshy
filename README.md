@@ -30,7 +30,7 @@ LLM_response_multi return a openai choices list
 
 5. arguments are 
 --dataset your dataset path
---type dataset name in "newqa"(logicqa_english) "logicqa"(logicqa chinese) "reclor" "folio" "pw" "ruletaker"
---log logfile
+--type dataset name in "newqa"(logicqa_english) "logicqa"(logicqa chinese) "reclor" "folio" "pw"(proofwriter) "ruletaker"
+--log logfile_path
 results are the last line in logfiles
 ```
